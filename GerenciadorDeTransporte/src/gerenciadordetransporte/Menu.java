@@ -19,8 +19,8 @@ public class Menu
         System.out.println("1 - Cadastrar Aluno");
         System.out.println("2 - Cadastrar Paciente");
         System.out.println("3 - Cadastrar Motorista");
-        System.out.println("5 - Cadastrar Veículo");
-        System.out.println("6 - Voltar");
+        System.out.println("4 - Cadastrar Veículo");
+        System.out.println("5 - Voltar");
         System.out.println();
         System.out.println("Digite sua Escolha: ");
     }
@@ -31,8 +31,8 @@ public class Menu
         System.out.println("1 - Alunos");
         System.out.println("2 - Pacientes");
         System.out.println("3 - Motoristas");
-        System.out.println("5 - Veículos");
-        System.out.println("6 - Voltar");
+        System.out.println("4 - Veículos");
+        System.out.println("5 - Voltar");
         System.out.println();
         System.out.println("Digite sua Escolha: ");
     }
