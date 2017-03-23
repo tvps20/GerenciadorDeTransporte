@@ -1,7 +1,7 @@
 package gerenciadordetransporte;
 
 public class Menu 
-{
+{      
     public void menuPrincipal()
     {
         System.out.println("======= Menu Principal =======");
