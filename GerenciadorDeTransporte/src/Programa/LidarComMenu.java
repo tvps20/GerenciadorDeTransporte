@@ -1,15 +1,15 @@
 package Programa;
 
-import Global.Navegacao;
 import Interfaces.INavegacao;
 
 public abstract class LidarComMenu 
 {
-    INavegacao navegar = new Navegacao();
-    int escolha;
+    protected final INavegacao navegar;
+    protected int escolha;
     
-    public LidarComMenu(int _escolha)
+    public LidarComMenu(int _escolha, INavegacao navegacao)
     {
-        escolha = this.escolha;
+        escolha = _escolha;
+        navegar = navegacao;
     }
 }

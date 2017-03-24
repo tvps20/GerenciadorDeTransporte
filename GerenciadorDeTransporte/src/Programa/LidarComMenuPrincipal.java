@@ -1,14 +1,16 @@
 package Programa;
 
+import Interfaces.*;
+
 public class LidarComMenuPrincipal extends LidarComMenu 
 {
 
-    public LidarComMenuPrincipal(int _escolha) {
-        super(_escolha);
+    public LidarComMenuPrincipal(int _escolha, INavegacao navegacao) {
+        super(_escolha, navegacao);
     }
     
     public void gerenciar()
-    {
+    {      
         switch(this.escolha)
         {
             case 1:
@@ -24,4 +26,8 @@ public class LidarComMenuPrincipal extends LidarComMenu
         }
     }
 
+    protected INavegacaoEducacao getNavegacaoEducacao()
+    {
+        return (INavegacaoEducacao)this.navegar;
+    }
 }
