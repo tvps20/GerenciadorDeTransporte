@@ -1,6 +1,6 @@
 package Interfaces;
 
-public interface ITransporte 
+public interface INavegacaoTransporte extends INavegacao
 {
     public int irParaCadastrarMotorista();
     

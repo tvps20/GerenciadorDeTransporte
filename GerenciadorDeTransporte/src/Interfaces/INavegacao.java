@@ -1,6 +1,6 @@
 package Interfaces;
 
-public interface INavegacao 
+public interface INavegacao
 {
     public int irParaMenuPrincipal();
     
@@ -12,5 +12,5 @@ public interface INavegacao
     
     public int isParaTabelaDeHorario();
     
-    public int voltar();
+    public IMenu voltar();
 }

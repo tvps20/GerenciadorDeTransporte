@@ -1,6 +1,6 @@
 package Interfaces;
 
-public interface ISaude 
+public interface INavegacaoSaude extends INavegacao
 {
     public int irParaCadastrarPaciente();
     
