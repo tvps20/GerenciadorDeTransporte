@@ -1,11 +1,8 @@
 package Global;
 
+import Interfaces.IMenu;
 import Interfaces.INavegacao;
-import Menus.MenuEducacao;
-import Menus.MenuPrincipal;
-import Menus.MenuSaude;
-import Menus.MenuTabelaDeHorario;
-import Menus.MenuTransporte;
+import Menus.*;
 
 public class Navegacao implements INavegacao
 {
@@ -53,7 +50,7 @@ public class Navegacao implements INavegacao
     }
     
     @Override
-    public int voltar() {
-        throw new UnsupportedOperationException("Not supported yet."); 
+    public IMenu voltar() {
+        return Pilha.desempilha();
     } 
 }
