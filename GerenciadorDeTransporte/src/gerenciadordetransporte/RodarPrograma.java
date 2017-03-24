@@ -7,12 +7,12 @@ public class RodarPrograma
 {
     static Menu menu = new Menu();
     
-    public static void chamarMenuCadastro()
+    public static void chamarMenuEducacao()
     {
         Scanner entrada = new Scanner(System.in);
         
         System.out.println();
-        menu.menuDeCadastro();
+        menu.menuDeEducacao();        
         int escolha = entrada.nextInt();      
         
         switch(escolha)
@@ -25,14 +25,60 @@ public class RodarPrograma
                 break;
             case 4:
                 break;
-            case 5:
+            default:
                 break;
-            case 6:
+        }      
+    }
+    
+    public static void chamarMenuSaude()
+    {
+        Scanner entrada = new Scanner(System.in);
+        
+        System.out.println();
+        menu.menuDeSaude();        
+        int escolha = entrada.nextInt();      
+        
+        switch(escolha)
+        {
+            case 1:
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            case 4:
                 break;
             default:
                 break;
-        }
+        }      
+    }
+    
+    public static void chamarMenuTransporte()
+    {
+        Scanner entrada = new Scanner(System.in);
         
+        System.out.println();
+        menu.menuDeTransporte();        
+        int escolha = entrada.nextInt();      
+        
+        switch(escolha)
+        {
+            case 1:
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            case 4:
+                break;
+            default:
+                break;
+        }      
+    }
+    
+    public static void TabelaDeHorario()
+    {
+         menu.TabelaDeHorarios();
     }
     
     public static void main(String[] args) throws Exception 
@@ -53,13 +99,18 @@ public class RodarPrograma
                 switch(escolha)
                 {
                     case 1:
-                        chamarMenuCadastro();
+                        chamarMenuEducacao();
                         break;
                     case 2:
+                        chamarMenuSaude();
                         break;
                     case 3:
+                        chamarMenuTransporte();
                         break;
                     case 4:
+                        TabelaDeHorario();
+                        break;
+                    case 5:
                         loop = false;
                         break;
                     default:
