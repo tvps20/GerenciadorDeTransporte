@@ -28,6 +28,7 @@ public class RodarPrograma
                 MostrarAlunos();
                 break;
             case 4:
+                MostrarViagens();
                 break;
             default:
                 break;
