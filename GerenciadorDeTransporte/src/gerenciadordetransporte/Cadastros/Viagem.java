@@ -3,8 +3,9 @@ package gerenciadordetransporte.Cadastros;
 public class Viagem 
 {
     private String Destino;
-    private String Turno;
     private double horario;
+    private String Turno;
+    
 
 
     public String getDestino() {
@@ -16,6 +17,14 @@ public class Viagem
         this.Destino = Destino;
     }
 
+    public double getHorario() {
+        return horario;
+    }
+
+
+    public void setHorario(double horario) {
+        this.horario = horario;
+    }
     
     public String getTurno() {
         return Turno;
@@ -25,14 +34,5 @@ public class Viagem
     public void setTurno(String Turno) {
         this.Turno = Turno;
     }
-
-
-    public double getHorario() {
-        return horario;
-    }
-
-
-    public void setHorario(double horario) {
-        this.horario = horario;
-    }
+    
 }
