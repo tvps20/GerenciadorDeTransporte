@@ -1,4 +1,4 @@
-package gerenciadordetransporte.Cadastros;
+package GerenciarTransporte.Cadastros;
 
 
 public class Aluno 

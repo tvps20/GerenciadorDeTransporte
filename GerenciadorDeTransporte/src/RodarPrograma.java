@@ -10,7 +10,7 @@ public class RodarPrograma
        int escolha = 0;
        
        escolha = navegar.irParaMenuPrincipal();
-       LidarComMenuPrincipal menu = new LidarComMenuPrincipal(escolha);      
+       //LidarComMenuPrincipal menu = new LidarComMenuPrincipal(escolha);      
        //Que o programa foi finalizado
     }
 }

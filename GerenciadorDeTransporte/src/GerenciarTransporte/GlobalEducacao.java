@@ -1,7 +1,7 @@
-package gerenciadordetransporte;
+package GerenciarTransporte;
 
-import gerenciadordetransporte.Cadastros.Viagem;
-import gerenciadordetransporte.Cadastros.Aluno;
+import GerenciarTransporte.Cadastros.Viagem;
+import GerenciarTransporte.Cadastros.Aluno;
 import java.util.LinkedList;
 import java.util.Scanner;
 
