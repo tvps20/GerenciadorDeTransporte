@@ -1,6 +1,6 @@
 package gerenciadordetransporte;
 
-import static gerenciadordetransporte.Global.*;
+import static gerenciadordetransporte.GlobalEducacao.*;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 

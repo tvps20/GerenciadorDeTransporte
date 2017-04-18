@@ -6,7 +6,7 @@ import java.util.LinkedList;
 import java.util.Scanner;
 
 
-public class Global 
+public class GlobalEducacao 
 {
     private static Scanner pegaEntrada = new Scanner(System.in);
     private static LinkedList<Aluno> listaDeAlunos = new LinkedList(); 
