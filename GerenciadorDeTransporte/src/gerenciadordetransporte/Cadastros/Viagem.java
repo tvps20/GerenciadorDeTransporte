@@ -3,7 +3,7 @@ package gerenciadordetransporte.Cadastros;
 public class Viagem 
 {
     private String Destino;
-    private double horario;
+    private String horario;
     private String Turno;
     
 
@@ -17,12 +17,12 @@ public class Viagem
         this.Destino = Destino;
     }
 
-    public double getHorario() {
+    public String getHorario() {
         return horario;
     }
 
 
-    public void setHorario(double horario) {
+    public void setHorario(String horario) {
         this.horario = horario;
     }
     
