@@ -24,6 +24,7 @@ public class RodarPrograma
             case 2:
                 break;
             case 3:
+                MostrarAlunos();
                 break;
             case 4:
                 break;
