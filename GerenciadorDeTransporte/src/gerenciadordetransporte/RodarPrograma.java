@@ -1,5 +1,6 @@
 package gerenciadordetransporte;
 
+import static gerenciadordetransporte.Global.*;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -18,6 +19,7 @@ public class RodarPrograma
         switch(escolha)
         {
             case 1:
+                AdicionarAluno();
                 break;
             case 2:
                 break;
