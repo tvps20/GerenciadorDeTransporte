@@ -22,7 +22,26 @@ public class Global
         System.out.println("Digite a Instituição: ");
         entrada = pegaEntrada.nextLine();
         novoAluno.setInstituicao(entrada);
+        listaDeAlunos.add(novoAluno);
         System.out.println("Aluno Adicionado");
+        System.out.println();
     }
     
+    public static void MostrarAlunos()
+    {
+        Aluno[] alunos = new Aluno[listaDeAlunos.size()];
+        Aluno[] array = listaDeAlunos.toArray(alunos);
+        System.out.println("======= Alunos Cadastrados =======");
+        
+        if(array.length > 0)
+        {
+            for(Aluno atual: array)
+                System.out.println(atual.getNome() + " => " + atual.getInstituicao());
+        }
+        else
+            System.out.println("Nenhum Aluno Cadastrado");
+        
+        System.out.println();
+        
+    }
 }
