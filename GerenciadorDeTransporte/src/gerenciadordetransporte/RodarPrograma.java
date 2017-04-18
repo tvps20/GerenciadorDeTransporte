@@ -22,6 +22,7 @@ public class RodarPrograma
                 AdicionarAluno();
                 break;
             case 2:
+                AdicionarViagem();
                 break;
             case 3:
                 MostrarAlunos();
