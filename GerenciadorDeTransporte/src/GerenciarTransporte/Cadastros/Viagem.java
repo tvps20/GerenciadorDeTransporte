@@ -4,7 +4,9 @@ public class Viagem
 {
     private String Destino;
     private String horario;
-    private String Turno;
+    private String turno;
+    private Paciente paciente;
+    private String acompanhante;
     
 
 
@@ -27,12 +29,28 @@ public class Viagem
     }
     
     public String getTurno() {
-        return Turno;
+        return turno;
     }
 
 
-    public void setTurno(String Turno) {
-        this.Turno = Turno;
+    public void setTurno(String turno) {
+        this.turno = turno;
+    }
+
+    public Paciente getPaciente() {
+        return paciente;
+    }
+
+    public void setPaciente(Paciente paciente) {
+        this.paciente = paciente;
+    }
+
+    public String getAcompanhante() {
+        return acompanhante;
+    }
+
+    public void setAcompanhante(String acompanhante) {
+        this.acompanhante = acompanhante;
     }
     
 }
