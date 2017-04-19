@@ -56,6 +56,7 @@ public class RodarPrograma
                 MostarPacientes();
                 break;
             case 4:
+                MostrarViagensSaude();
                 break;
             default:
                 break;
