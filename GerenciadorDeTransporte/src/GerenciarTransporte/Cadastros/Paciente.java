@@ -3,7 +3,7 @@ package GerenciarTransporte.Cadastros;
 public class Paciente 
 {
     private String Nome;
-    private String Hospital;
+    private String Destino;
 
     public String getNome() {
         return Nome;
@@ -13,11 +13,11 @@ public class Paciente
         this.Nome = Nome;
     }
 
-    public String getHospital() {
-        return Hospital;
+    public String getDestino() {
+        return Destino;
     }
 
-    public void setHospital(String Hospital) {
-        this.Hospital = Hospital;
+    public void setDestino(String Destino) {
+        this.Destino = Destino;
     }
 }
