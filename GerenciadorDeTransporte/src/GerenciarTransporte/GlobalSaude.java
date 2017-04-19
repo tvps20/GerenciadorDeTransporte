@@ -61,10 +61,10 @@ public class GlobalSaude
         if(existe != null)
         {
             novaViagem.setPaciente(existe);
-            listaDeViagens.add(novaViagem);
             System.out.println("Acompanhante: ");
             entrada = pegaEntrada.nextLine();
             novaViagem.setAcompanhante(entrada);
+            listaDeViagens.add(novaViagem);
             System.out.println("Viagem Adicionada");
             System.out.println();
         }
@@ -91,5 +91,28 @@ public class GlobalSaude
             }
         }        
         return null;
+    }
+    
+    public static void MostrarViagensSaude()
+    {
+        Viagem[] array = new Viagem[listaDeViagens.size()];
+        Viagem[] viagens = listaDeViagens.toArray(array);
+        System.out.println("======= Viagens Cadastradas =======");
+        
+        if(viagens.length > 0)
+        {
+            for(Viagem atual: viagens)
+            {
+                System.out.println("Destino: " + atual.getDestino());
+                System.out.println("Horario: " + atual.getHorario() + " => " + atual.getTurno()); 
+                System.out.println("Paciente: " + atual.getPaciente().getNome()); 
+                System.out.println("Acompanhante: " + atual.getAcompanhante());
+                System.out.println();
+            }
+        }
+        else
+            System.out.println("Nenhuma Viagem Cadastrada");
+        
+        System.out.println();
     }
 }
