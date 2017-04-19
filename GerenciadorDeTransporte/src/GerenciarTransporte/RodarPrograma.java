@@ -50,6 +50,7 @@ public class RodarPrograma
                 AdicionarPaciente();
                 break;
             case 2:
+                AdicionarViagemSaude();
                 break;
             case 3:
                 MostarPacientes();
