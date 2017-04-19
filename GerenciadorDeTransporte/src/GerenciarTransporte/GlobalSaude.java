@@ -18,7 +18,7 @@ public class GlobalSaude
         System.out.println("Nome: ");
         String entrada = pegaEntrada.nextLine();
         novoPaciente.setNome(entrada);
-        System.out.println("Destino: ");
+        System.out.println("Hospital: ");
         entrada = pegaEntrada.nextLine();
         novoPaciente.setDestino(entrada);
         listaDePacientes.add(novoPaciente);
@@ -41,5 +41,55 @@ public class GlobalSaude
             System.out.println("Nenhum Paciente Encontrado.");
         
         System.out.println();
+    }
+    
+    public static void AdicionarViagemSaude()
+    {
+        Viagem novaViagem = new Viagem();
+        System.out.println("Destino: ");
+        String entrada = pegaEntrada.nextLine();
+        novaViagem.setDestino(entrada);
+        System.out.println("Horario: ");
+        entrada = pegaEntrada.nextLine();
+        novaViagem.setHorario(entrada);
+        System.out.println("Turno: ");
+        entrada = pegaEntrada.nextLine();
+        novaViagem.setTurno(entrada);
+        System.out.println("Paciente: ");
+        entrada = pegaEntrada.nextLine();
+        Paciente existe = AcharPaciente(entrada);
+        if(existe != null)
+        {
+            novaViagem.setPaciente(existe);
+            listaDeViagens.add(novaViagem);
+            System.out.println("Acompanhante: ");
+            entrada = pegaEntrada.nextLine();
+            novaViagem.setAcompanhante(entrada);
+            System.out.println("Viagem Adicionada");
+            System.out.println();
+        }
+        else
+        {
+            System.out.println();
+            System.out.println("Paciente ainda não foi cadastrado!");
+            System.out.println();
+        }
+        
+    }
+    
+    private static Paciente AcharPaciente(String nome)
+    {
+        Paciente[] array = new Paciente[listaDePacientes.size()];
+        Paciente[] pacientes = listaDePacientes.toArray(array);
+        
+        if(pacientes.length > 0)
+        {
+            for(Paciente atual: pacientes)
+            {
+                if(atual.getNome().equals(nome))
+                    return atual;
+            }
+        }        
+        return null;
     }
 }
