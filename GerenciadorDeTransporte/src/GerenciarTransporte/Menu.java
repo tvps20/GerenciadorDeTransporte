@@ -31,7 +31,7 @@ public class Menu
         System.out.println("1 - Cadastrar Paciente");
         System.out.println("2 - Cadastrar Viagem");
         System.out.println("3 - Ver Pacientes");
-        System.out.println("4 - Ver Alunos");
+        System.out.println("4 - Ver Viagens");
         System.out.println();
         System.out.println("Digite sua Escolha: ");
     }
