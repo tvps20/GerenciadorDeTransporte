@@ -1,6 +1,7 @@
 package GerenciarTransporte;
 
 import static GerenciarTransporte.GlobalEducacao.*;
+import static GerenciarTransporte.GlobalSaude.*;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -46,10 +47,12 @@ public class RodarPrograma
         switch(escolha)
         {
             case 1:
+                AdicionarPaciente();
                 break;
             case 2:
                 break;
             case 3:
+                MostarPacientes();
                 break;
             case 4:
                 break;
