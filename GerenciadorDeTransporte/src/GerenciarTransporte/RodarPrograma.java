@@ -23,13 +23,13 @@ public class RodarPrograma
                 AdicionarAluno();
                 break;
             case 2:
-                AdicionarViagem();
+                AdicionarViagemEducacao();
                 break;
             case 3:
                 MostrarAlunos();
                 break;
             case 4:
-                MostrarViagens();
+                MostrarViagensEducacao();
                 break;
             default:
                 break;
