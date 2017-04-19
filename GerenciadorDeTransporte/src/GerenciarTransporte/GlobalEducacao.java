@@ -45,7 +45,7 @@ public class GlobalEducacao
         
     }
     
-    public static void AdicionarViagem()
+    public static void AdicionarViagemEducacao()
     {
         Viagem novaViagem = new Viagem();
         System.out.println("Destino: ");
@@ -63,7 +63,7 @@ public class GlobalEducacao
         
     }
     
-    public static void MostrarViagens()
+    public static void MostrarViagensEducacao()
     {
         Viagem[] array = new Viagem[listaDeViagens.size()];
         Viagem[] viagens = listaDeViagens.toArray(array);
