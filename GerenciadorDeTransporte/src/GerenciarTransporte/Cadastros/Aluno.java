@@ -1,21 +1,10 @@
 package GerenciarTransporte.Cadastros;
 
 
-public class Aluno 
+public class Aluno extends Pessoa
 {
-    private String Nome;
     private String Instituicao;
-   
-    public String getNome() {
-        return Nome;
-    }
-
-    
-    public void setNome(String Nome) {
-        this.Nome = Nome;
-    }
-
-    
+  
     public String getInstituicao() {
         return Instituicao;
     }

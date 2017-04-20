@@ -1,17 +1,8 @@
 package GerenciarTransporte.Cadastros;
 
-public class Paciente 
+public class Paciente extends Pessoa
 {
-    private String Nome;
     private String Hospital;
-
-    public String getNome() {
-        return Nome;
-    }
-
-    public void setNome(String Nome) {
-        this.Nome = Nome;
-    }
 
     public String getDestino() {
         return Hospital;
