@@ -38,7 +38,7 @@ public class GlobalSaude
                 System.out.println(atual.getNome() + " => " + atual.getDestino());
         }
         else
-            System.out.println("Nenhum Paciente Encontrado.");
+            System.out.println("Nenhum Paciente Cadastrado.");
         
         System.out.println();
     }
