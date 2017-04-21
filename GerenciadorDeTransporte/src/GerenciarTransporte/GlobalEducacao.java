@@ -93,4 +93,12 @@ public class GlobalEducacao
         else
             return false;
     }
+    
+    public static Viagem[] ViagensEducacao()
+    {
+        Viagem[] array = new Viagem[listaDeViagens.size()];
+        Viagem[] viagens = listaDeViagens.toArray(array);
+        
+        return viagens;
+    }
 }
