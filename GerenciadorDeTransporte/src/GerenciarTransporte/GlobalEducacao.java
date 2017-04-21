@@ -82,4 +82,15 @@ public class GlobalEducacao
         
         System.out.println();
     }
+    
+    public static boolean TemViagensEducacao()
+    {
+        Viagem[] array = new Viagem[listaDeViagens.size()];
+        Viagem[] viagens = listaDeViagens.toArray(array);
+        
+        if(viagens.length > 0)
+            return true;
+        else
+            return false;
+    }
 }
