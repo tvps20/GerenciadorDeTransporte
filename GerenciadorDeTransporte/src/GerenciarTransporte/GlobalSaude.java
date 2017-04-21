@@ -128,4 +128,12 @@ public class GlobalSaude
         else
             return false;
     }
+    
+    public static Viagem[] ViagensSaude()
+    {
+        Viagem[] array = new Viagem[listaDeViagens.size()];
+        Viagem[] viagens = listaDeViagens.toArray(array);
+        
+        return viagens;
+    }
 }
