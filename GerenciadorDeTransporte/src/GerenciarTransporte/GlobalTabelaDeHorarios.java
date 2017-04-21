@@ -1,7 +1,6 @@
 package GerenciarTransporte;
 
 import GerenciarTransporte.Cadastros.Viagem;
-import GerenciarTransporte.Enumeracao.Dias;
 import static GerenciarTransporte.GlobalEducacao.*;
 import static GerenciarTransporte.GlobalSaude.*;
 
