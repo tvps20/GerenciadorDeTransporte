@@ -1,11 +1,13 @@
 package GerenciarTransporte.Cadastros;
 
+import GerenciarTransporte.Enumeracao.Dias;
+
 public class Viagem 
 {
     private String Destino;
     private String horario;
     private String turno;
-    private String dia;
+    private Dias dias;
     private Paciente paciente;
     private String acompanhante;
     
@@ -37,12 +39,12 @@ public class Viagem
     }
     
     
-    public String getDia() {
-        return dia;
+    public Dias getDias() {
+        return dias;
     }
 
-    public void setDia(String dia) {
-        this.dia = dia;
+    public void setDias(Dias dias) {
+        this.dias = dias;
     }
 
     
