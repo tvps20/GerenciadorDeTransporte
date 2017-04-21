@@ -2,6 +2,7 @@ package GerenciarTransporte;
 
 import GerenciarTransporte.Cadastros.Viagem;
 import GerenciarTransporte.Cadastros.Aluno;
+import static GerenciarTransporte.GlobalViagens.*;
 import java.util.LinkedList;
 import java.util.Scanner;
 
@@ -57,6 +58,7 @@ public class GlobalEducacao
         System.out.println("Turno: ");
         entrada = pegaEntrada.nextLine();
         novaViagem.setTurno(entrada);
+        EscolherDia(novaViagem);
         listaDeViagens.add(novaViagem);
         System.out.println("Viagem Adicionada");
         System.out.println();
@@ -72,7 +74,8 @@ public class GlobalEducacao
         if(viagens.length > 0)
         {
             for(Viagem atual: viagens)
-                System.out.println(atual.getDestino() + " => " + atual.getHorario() + " => " + atual.getTurno());
+                System.out.println(atual.getDestino() + " => " + atual.getDias() +" => " + atual.getHorario() 
+                        + " => " + atual.getTurno());
         }
         else
             System.out.println("Nenhuma Viagem Cadastrada");
