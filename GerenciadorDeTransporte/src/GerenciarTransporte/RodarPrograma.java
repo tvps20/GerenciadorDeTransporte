@@ -2,6 +2,7 @@ package GerenciarTransporte;
 
 import static GerenciarTransporte.GlobalEducacao.*;
 import static GerenciarTransporte.GlobalSaude.*;
+import static GerenciarTransporte.GlobalTabelaDeHorarios.*;
 import static GerenciarTransporte.GlobalTransporte.*;
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -93,7 +94,11 @@ public class RodarPrograma
     
     public static void TabelaDeHorario()
     {
-         menu.TabelaDeHorarios();
+        menu.TabelaDeHorarios();
+        MostarTabelaDeHorarios();
+        System.out.println("Pressione qualquer tecla para continuar....");
+        Scanner entrada = new Scanner(System.in);
+         
     }
     
     public static void main(String[] args) throws Exception 
