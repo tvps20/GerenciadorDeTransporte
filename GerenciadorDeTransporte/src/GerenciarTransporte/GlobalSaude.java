@@ -2,6 +2,7 @@ package GerenciarTransporte;
 
 import GerenciarTransporte.Cadastros.Paciente;
 import GerenciarTransporte.Cadastros.Viagem;
+import static GerenciarTransporte.GlobalViagens.*;
 import java.util.LinkedList;
 import java.util.Scanner;
 
@@ -55,6 +56,7 @@ public class GlobalSaude
         System.out.println("Turno: ");
         entrada = pegaEntrada.nextLine();
         novaViagem.setTurno(entrada);
+        EscolherDia(novaViagem);
         System.out.println("Paciente: ");
         entrada = pegaEntrada.nextLine();
         Paciente existe = AcharPaciente(entrada);
@@ -104,7 +106,7 @@ public class GlobalSaude
             for(Viagem atual: viagens)
             {
                 System.out.println("Destino: " + atual.getDestino());
-                System.out.println("Horario: " + atual.getHorario() + " => " + atual.getTurno()); 
+                System.out.println("Dia: " + atual.getDias()+ " => " + atual.getHorario() + " => " + atual.getTurno()); 
                 System.out.println("Paciente: " + atual.getPaciente().getNome()); 
                 System.out.println("Acompanhante: " + atual.getAcompanhante());
                 System.out.println();
