@@ -62,7 +62,6 @@ public class GlobalEducacao
         listaDeViagens.add(novaViagem);
         System.out.println("Viagem Adicionada");
         System.out.println();
-        
     }
     
     public static void MostrarViagensEducacao()
@@ -89,5 +88,10 @@ public class GlobalEducacao
         Viagem[] viagens = listaDeViagens.toArray(array);
         
         return viagens;
+    }
+    
+    public static void ApagardadosEducacao()
+    {
+        listaDeViagens.clear();
     }
 }

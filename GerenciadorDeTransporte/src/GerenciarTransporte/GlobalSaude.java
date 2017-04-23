@@ -125,4 +125,9 @@ public class GlobalSaude
         
         return viagens;
     }
+    
+    public static void ApagarDadosSaude()
+    {
+        listaDeViagens.clear();
+    }
 }

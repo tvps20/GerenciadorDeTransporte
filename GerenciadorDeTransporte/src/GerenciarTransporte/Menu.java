@@ -9,7 +9,8 @@ public class Menu
         System.out.println("2 - Saude");
         System.out.println("3 - Transporte");
         System.out.println("4 - Tabela De Horarios");
-        System.out.println("5 - Sair");
+        System.out.println("5 - Fechar Semana");
+        System.out.println("6 - Sair");
         System.out.println();
         System.out.println("Digite sua Escolha: ");
     }

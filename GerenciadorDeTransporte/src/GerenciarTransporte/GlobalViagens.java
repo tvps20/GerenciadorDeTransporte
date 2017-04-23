@@ -40,7 +40,6 @@ public class GlobalViagens
                 System.out.println("Escolha Invalida");
                 EscolherDia(_novaViagem);
                 break;
-        }
-        
+        }       
     }
 }

@@ -86,7 +86,7 @@ public class RodarPrograma
                 break;
             case 4:
                 MostrarVeiculos();
-                break;
+                break;   
             default:
                 break;
         }      
@@ -128,6 +128,12 @@ public class RodarPrograma
                         TabelaDeHorario();
                         break;
                     case 5:
+                        ApagardadosEducacao();
+                        ApagarDadosSaude();
+                        System.out.println("Semana fechada. Viagens Finalizadas");
+                        System.out.println();
+                        break;
+                    case 6:
                         loop = false;
                         break;
                     default:
