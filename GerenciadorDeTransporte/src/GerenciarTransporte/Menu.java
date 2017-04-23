@@ -21,6 +21,7 @@ public class Menu
         System.out.println("2 - Cadastrar Viagem");
         System.out.println("3 - Ver Alunos");
         System.out.println("4 - Ver Viagens");
+        System.out.println("Pressione qualquer tecla para voltar...");
         System.out.println();
         System.out.println("Digite sua Escolha: ");
     }
@@ -32,6 +33,7 @@ public class Menu
         System.out.println("2 - Cadastrar Viagem");
         System.out.println("3 - Ver Pacientes");
         System.out.println("4 - Ver Viagens");
+        System.out.println("Pressione qualquer tecla para voltar...");
         System.out.println();
         System.out.println("Digite sua Escolha: ");
     }
@@ -43,6 +45,7 @@ public class Menu
         System.out.println("2 - Cadastrar Veiculos");
         System.out.println("3 - Ver Motoristas");
         System.out.println("4 - Ver Veículos");
+        System.out.println("Pressione qualquer tecla para voltar...");
         System.out.println();
         System.out.println("Digite sua Escolha: ");
     }
