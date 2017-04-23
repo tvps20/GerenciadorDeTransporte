@@ -11,7 +11,7 @@ public class GlobalTabelaDeHorarios
         Viagem[] educacao = ViagensEducacao();
         Viagem[] saude = ViagensSaude();
         
-        if((educacao.length > 0) && (saude.length > 0))
+        if((educacao.length > 0) || (saude.length > 0))
         {
             System.out.println("#### Educacao ####");
             for(Viagem atual: educacao)
