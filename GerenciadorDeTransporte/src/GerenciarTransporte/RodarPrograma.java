@@ -95,10 +95,7 @@ public class RodarPrograma
     public static void TabelaDeHorario()
     {
         menu.TabelaDeHorarios();
-        MostarTabelaDeHorarios();
-        System.out.println("Pressione qualquer tecla para continuar....");
-        Scanner entrada = new Scanner(System.in);
-         
+        MostarTabelaDeHorarios();       
     }
     
     public static void main(String[] args) throws Exception 
