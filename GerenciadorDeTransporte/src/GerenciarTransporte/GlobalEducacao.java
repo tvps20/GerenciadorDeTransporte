@@ -3,7 +3,7 @@ package GerenciarTransporte;
 import GerenciarTransporte.Cadastros.Viagem;
 import GerenciarTransporte.Cadastros.Aluno;
 import static GerenciarTransporte.GlobalViagens.*;
-import Interfaces.IEducacao;
+import GerenciarTransporte.Interfaces.IEducacao;
 import java.util.LinkedList;
 import java.util.Scanner;
 

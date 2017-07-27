@@ -1,4 +1,4 @@
-package Interfaces;
+package GerenciarTransporte.Interfaces;
 
 public interface ITransporte 
 {

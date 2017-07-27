@@ -1,9 +1,9 @@
 package GerenciarTransporte;
 
 import static GerenciarTransporte.GlobalTabelaDeHorarios.*;
-import Interfaces.IEducacao;
-import Interfaces.ISaude;
-import Interfaces.ITransporte;
+import GerenciarTransporte.Interfaces.IEducacao;
+import GerenciarTransporte.Interfaces.ISaude;
+import GerenciarTransporte.Interfaces.ITransporte;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 

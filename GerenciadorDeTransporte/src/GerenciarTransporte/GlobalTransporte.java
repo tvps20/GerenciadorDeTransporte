@@ -2,7 +2,7 @@ package GerenciarTransporte;
 
 import GerenciarTransporte.Cadastros.Motorista;
 import GerenciarTransporte.Cadastros.Veiculo;
-import Interfaces.ITransporte;
+import GerenciarTransporte.Interfaces.ITransporte;
 import java.util.LinkedList;
 import java.util.Scanner;
 

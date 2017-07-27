@@ -3,7 +3,7 @@ package GerenciarTransporte;
 import GerenciarTransporte.Cadastros.Paciente;
 import GerenciarTransporte.Cadastros.Viagem;
 import static GerenciarTransporte.GlobalViagens.*;
-import Interfaces.ISaude;
+import GerenciarTransporte.Interfaces.ISaude;
 import java.util.LinkedList;
 import java.util.Scanner;
 
