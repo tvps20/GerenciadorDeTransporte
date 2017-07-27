@@ -1,15 +1,18 @@
 package GerenciarTransporte;
 
-import static GerenciarTransporte.GlobalEducacao.*;
-import static GerenciarTransporte.GlobalSaude.*;
 import static GerenciarTransporte.GlobalTabelaDeHorarios.*;
-import static GerenciarTransporte.GlobalTransporte.*;
+import Interfaces.IEducacao;
+import Interfaces.ISaude;
+import Interfaces.ITransporte;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class RodarPrograma 
 {
     static Menu menu = new Menu();
+    static IEducacao educacao = new GlobalEducacao();
+    static ISaude saude = new GlobalSaude();
+    static ITransporte transporte = new GlobalTransporte();
     
     public static void chamarMenuEducacao()
     {
@@ -22,16 +25,19 @@ public class RodarPrograma
         switch(escolha)
         {
             case 1:
-                AdicionarAluno();
+                educacao.AdicionarAluno();
                 break;
             case 2:
-                AdicionarViagemEducacao();
+                educacao.AdicionarViagemEducacao();
                 break;
             case 3:
-                MostrarAlunos();
+                educacao.MostrarAlunos();
                 break;
             case 4:
-                MostrarViagensEducacao();
+                educacao.MostrarViagensEducacao();
+                break;
+            case 5:
+                educacao.RemoverAluno();
                 break;
             default:
                 break;
@@ -49,16 +55,16 @@ public class RodarPrograma
         switch(escolha)
         {
             case 1:
-                AdicionarPaciente();
+                saude.AdicionarPaciente();
                 break;
             case 2:
-                AdicionarViagemSaude();
+                saude.AdicionarViagemSaude();
                 break;
             case 3:
-                MostarPacientes();
+                saude.MostarPacientes();
                 break;
             case 4:
-                MostrarViagensSaude();
+                saude.MostrarViagensSaude();
                 break;
             default:
                 break;
@@ -76,16 +82,16 @@ public class RodarPrograma
         switch(escolha)
         {
             case 1:
-                AdicionarMotorista();
+                transporte.AdicionarMotorista();
                 break;
             case 2:
-                AdicionarVeiculo();
+                transporte.AdicionarVeiculo();
                 break;
             case 3:
-                MostarMotoristas();
+                transporte.MostarMotoristas();
                 break;
             case 4:
-                MostrarVeiculos();
+                transporte.MostrarVeiculos();
                 break;   
             default:
                 break;
@@ -128,8 +134,8 @@ public class RodarPrograma
                         TabelaDeHorario();
                         break;
                     case 5:
-                        ApagardadosEducacao();
-                        ApagarDadosSaude();
+                        educacao.ApagardadosEducacao();
+                        saude.ApagarDadosSaude();
                         System.out.println("Semana fechada. Viagens Finalizadas");
                         System.out.println();
                         break;

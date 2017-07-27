@@ -22,6 +22,7 @@ public class Menu
         System.out.println("2 - Cadastrar Viagem");
         System.out.println("3 - Ver Alunos");
         System.out.println("4 - Ver Viagens");
+        System.out.println("5 - Remover Aluno");
         System.out.println("Pressione qualquer numero para voltar...");
         System.out.println();
         System.out.println("Digite sua Escolha: ");

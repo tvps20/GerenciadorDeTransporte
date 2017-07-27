@@ -2,16 +2,17 @@ package GerenciarTransporte;
 
 import GerenciarTransporte.Cadastros.Motorista;
 import GerenciarTransporte.Cadastros.Veiculo;
+import Interfaces.ITransporte;
 import java.util.LinkedList;
 import java.util.Scanner;
 
-public class GlobalTransporte 
+public class GlobalTransporte implements ITransporte
 {
     private static Scanner pegaEntrada = new Scanner(System.in);
     private static LinkedList<Motorista> listaDeMotoristas = new LinkedList();
     private static LinkedList<Veiculo> listaDeVeiculos = new LinkedList();
     
-    public static void AdicionarMotorista()
+    public void AdicionarMotorista()
     {
         Motorista novoMotorista = new Motorista();
         System.out.println("Nome: ");
@@ -25,7 +26,7 @@ public class GlobalTransporte
         System.out.println();
     }
     
-    public static void MostarMotoristas()
+    public void MostarMotoristas()
     {
         Motorista[] array = new Motorista[listaDeMotoristas.size()];
         Motorista[] motoristas = listaDeMotoristas.toArray(array);
@@ -42,7 +43,7 @@ public class GlobalTransporte
         System.out.println();      
     }
     
-    public static void AdicionarVeiculo()
+    public void AdicionarVeiculo()
     {
         Veiculo novoVeiculo = new Veiculo();
         System.out.println("Modelo: ");
@@ -56,7 +57,7 @@ public class GlobalTransporte
         System.out.println();
     }
     
-    public static void MostrarVeiculos()
+    public void MostrarVeiculos()
     {
         Veiculo[] array = new Veiculo[listaDeVeiculos.size()];
         Veiculo[] veiculos = listaDeVeiculos.toArray(array);

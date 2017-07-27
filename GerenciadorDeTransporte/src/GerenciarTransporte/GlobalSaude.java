@@ -3,17 +3,18 @@ package GerenciarTransporte;
 import GerenciarTransporte.Cadastros.Paciente;
 import GerenciarTransporte.Cadastros.Viagem;
 import static GerenciarTransporte.GlobalViagens.*;
+import Interfaces.ISaude;
 import java.util.LinkedList;
 import java.util.Scanner;
 
 
-public class GlobalSaude 
+public class GlobalSaude implements ISaude
 {
     private static Scanner pegaEntrada = new Scanner(System.in);
     private static LinkedList<Paciente> listaDePacientes = new LinkedList();
     private static LinkedList<Viagem> listaDeViagens = new LinkedList();
     
-    public static void AdicionarPaciente()
+    public void AdicionarPaciente()
     {
         Paciente novoPaciente = new Paciente();
         System.out.println("Nome: ");
@@ -27,7 +28,7 @@ public class GlobalSaude
         System.out.println();
     }
     
-    public static void MostarPacientes()
+    public void MostarPacientes()
     {
         Paciente[] array = new Paciente[listaDePacientes.size()];
         Paciente[] pacientes = listaDePacientes.toArray(array);
@@ -44,7 +45,7 @@ public class GlobalSaude
         System.out.println();
     }
     
-    public static void AdicionarViagemSaude()
+    public void AdicionarViagemSaude()
     {
         Viagem novaViagem = new Viagem();
         System.out.println("Destino: ");
@@ -79,7 +80,7 @@ public class GlobalSaude
         
     }
     
-    private static Paciente AcharPaciente(String nome)
+    private Paciente AcharPaciente(String nome)
     {
         Paciente[] array = new Paciente[listaDePacientes.size()];
         Paciente[] pacientes = listaDePacientes.toArray(array);
@@ -95,7 +96,7 @@ public class GlobalSaude
         return null;
     }
     
-    public static void MostrarViagensSaude()
+    public void MostrarViagensSaude()
     {
         Viagem[] array = new Viagem[listaDeViagens.size()];
         Viagem[] viagens = listaDeViagens.toArray(array);
@@ -126,7 +127,7 @@ public class GlobalSaude
         return viagens;
     }
     
-    public static void ApagarDadosSaude()
+    public void ApagarDadosSaude()
     {
         listaDeViagens.clear();
     }

@@ -3,18 +3,19 @@ package GerenciarTransporte;
 import GerenciarTransporte.Cadastros.Viagem;
 import GerenciarTransporte.Cadastros.Aluno;
 import static GerenciarTransporte.GlobalViagens.*;
+import Interfaces.IEducacao;
 import java.util.LinkedList;
 import java.util.Scanner;
 
 
-public class GlobalEducacao 
+public class GlobalEducacao implements IEducacao
 {
-    private static Scanner pegaEntrada = new Scanner(System.in);
-    private static LinkedList<Aluno> listaDeAlunos = new LinkedList(); 
-    private static LinkedList<Viagem> listaDeViagens = new LinkedList();
+    private Scanner pegaEntrada = new Scanner(System.in);
+    private LinkedList<Aluno> listaDeAlunos = new LinkedList(); 
+    static LinkedList<Viagem> listaDeViagens = new LinkedList();
     
  
-    public static void AdicionarAluno()
+    public void AdicionarAluno()
     {
         Aluno novoAluno = new Aluno();
         System.out.println("Nome: ");
@@ -28,7 +29,7 @@ public class GlobalEducacao
         System.out.println();
     }
     
-    public static void MostrarAlunos()
+    public void MostrarAlunos()
     {
         Aluno[] array = new Aluno[listaDeAlunos.size()];
         Aluno[] alunos = listaDeAlunos.toArray(array);
@@ -46,7 +47,7 @@ public class GlobalEducacao
         
     }
     
-    public static void AdicionarViagemEducacao()
+    public void AdicionarViagemEducacao()
     {
         Viagem novaViagem = new Viagem();
         System.out.println("Destino: ");
@@ -64,7 +65,7 @@ public class GlobalEducacao
         System.out.println();
     }
     
-    public static void MostrarViagensEducacao()
+    public void MostrarViagensEducacao()
     {
         Viagem[] array = new Viagem[listaDeViagens.size()];
         Viagem[] viagens = listaDeViagens.toArray(array);
@@ -90,8 +91,32 @@ public class GlobalEducacao
         return viagens;
     }
     
-    public static void ApagardadosEducacao()
+    public void ApagardadosEducacao()
     {
         listaDeViagens.clear();
+    }
+    
+    private boolean ApagarAluno(String nome)
+    {
+        for(int i=0; i<listaDeAlunos.size(); i++)
+        {
+            if(listaDeAlunos.get(i).getNome().equals(nome))
+            {
+                listaDeAlunos.remove(i);
+                return true;
+            }
+        }
+        
+        return false;
+    }
+    
+    public void RemoverAluno()
+    {
+        System.out.println("Digite o nome do aluno: ");
+        String entrada = pegaEntrada.nextLine();
+        if(ApagarAluno(entrada))
+            System.out.println("Aluno Removido");
+        else
+            System.out.println("Aluno não Cadastrado");
     }
 }
