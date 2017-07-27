@@ -39,6 +39,9 @@ public class RodarPrograma
             case 5:
                 educacao.RemoverAluno();
                 break;
+            case 6:
+                educacao.RemoverViagem();
+                break;
             default:
                 break;
         }      
@@ -66,6 +69,12 @@ public class RodarPrograma
             case 4:
                 saude.MostrarViagensSaude();
                 break;
+            case 5:
+                saude.RemoverPaciente();
+                break;
+            case 6:
+                saude.RemoverViagem();
+                break;
             default:
                 break;
         }      
@@ -92,7 +101,13 @@ public class RodarPrograma
                 break;
             case 4:
                 transporte.MostrarVeiculos();
-                break;   
+                break; 
+            case 5:
+                transporte.RemoverMotorista();
+                break;
+            case 6:
+                transporte.RemoverVeiculo();
+                break;
             default:
                 break;
         }      

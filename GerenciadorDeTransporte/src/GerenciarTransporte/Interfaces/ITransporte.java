@@ -9,4 +9,8 @@ public interface ITransporte
     public void AdicionarVeiculo();
     
     public void MostrarVeiculos();
+    
+    public void RemoverMotorista();
+    
+    public void RemoverVeiculo();
 }

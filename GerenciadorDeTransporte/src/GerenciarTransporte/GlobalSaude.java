@@ -10,10 +10,11 @@ import java.util.Scanner;
 
 public class GlobalSaude implements ISaude
 {
-    private static Scanner pegaEntrada = new Scanner(System.in);
-    private static LinkedList<Paciente> listaDePacientes = new LinkedList();
-    private static LinkedList<Viagem> listaDeViagens = new LinkedList();
+    private static final Scanner pegaEntrada = new Scanner(System.in);
+    private static final LinkedList<Paciente> listaDePacientes = new LinkedList();
+    private static final LinkedList<Viagem> listaDeViagens = new LinkedList();
     
+    @Override
     public void AdicionarPaciente()
     {
         Paciente novoPaciente = new Paciente();
@@ -28,6 +29,7 @@ public class GlobalSaude implements ISaude
         System.out.println();
     }
     
+    @Override
     public void MostarPacientes()
     {
         Paciente[] array = new Paciente[listaDePacientes.size()];
@@ -45,6 +47,7 @@ public class GlobalSaude implements ISaude
         System.out.println();
     }
     
+    @Override
     public void AdicionarViagemSaude()
     {
         Viagem novaViagem = new Viagem();
@@ -96,6 +99,7 @@ public class GlobalSaude implements ISaude
         return null;
     }
     
+    @Override
     public void MostrarViagensSaude()
     {
         Viagem[] array = new Viagem[listaDeViagens.size()];
@@ -127,8 +131,60 @@ public class GlobalSaude implements ISaude
         return viagens;
     }
     
+    @Override
     public void ApagarDadosSaude()
     {
         listaDeViagens.clear();
+    }
+    
+    private boolean ApagarPaciente(String nome)
+    {
+        for(int i=0; i<listaDePacientes.size(); i++)
+        {
+            if(listaDePacientes.get(i).getNome().equals(nome))
+            {
+                listaDePacientes.remove(i);
+                return true;
+            }
+        }
+        
+        return false;
+    }
+    
+    @Override
+    public void RemoverPaciente()
+    {
+        System.out.println("Digite o nome do Paciente: ");
+        String entrada = pegaEntrada.nextLine();
+        if(ApagarPaciente(entrada))
+            System.out.println("Paciente Removido");
+        else
+            System.out.println("Paceinte não Cadastrado!");
+    }
+    
+    
+    private boolean ApagarViagem(String paciente)
+    {
+        for(int i=0; i<listaDeViagens.size(); i++)
+        {
+            if(listaDeViagens.get(i).getPaciente().getNome().equals(paciente))
+            {
+                listaDeViagens.remove(i);
+                return true;
+            }
+        }
+        
+        return false;
+    }
+    
+    @Override
+    public void RemoverViagem()
+    {
+        System.out.println("Paciente: ");
+        String entrada = pegaEntrada.nextLine();
+        if(ApagarViagem(entrada))
+            System.out.println("Destino Removido");
+        else
+            System.out.println("Destino não cadastrado!");
     }
 }

@@ -10,11 +10,12 @@ import java.util.Scanner;
 
 public class GlobalEducacao implements IEducacao
 {
-    private Scanner pegaEntrada = new Scanner(System.in);
-    private LinkedList<Aluno> listaDeAlunos = new LinkedList(); 
+    private final Scanner pegaEntrada = new Scanner(System.in);
+    private final LinkedList<Aluno> listaDeAlunos = new LinkedList(); 
     static LinkedList<Viagem> listaDeViagens = new LinkedList();
     
  
+    @Override
     public void AdicionarAluno()
     {
         Aluno novoAluno = new Aluno();
@@ -29,6 +30,7 @@ public class GlobalEducacao implements IEducacao
         System.out.println();
     }
     
+    @Override
     public void MostrarAlunos()
     {
         Aluno[] array = new Aluno[listaDeAlunos.size()];
@@ -47,6 +49,7 @@ public class GlobalEducacao implements IEducacao
         
     }
     
+    @Override
     public void AdicionarViagemEducacao()
     {
         Viagem novaViagem = new Viagem();
@@ -65,6 +68,7 @@ public class GlobalEducacao implements IEducacao
         System.out.println();
     }
     
+    @Override
     public void MostrarViagensEducacao()
     {
         Viagem[] array = new Viagem[listaDeViagens.size()];
@@ -91,6 +95,7 @@ public class GlobalEducacao implements IEducacao
         return viagens;
     }
     
+    @Override
     public void ApagardadosEducacao()
     {
         listaDeViagens.clear();
@@ -110,6 +115,7 @@ public class GlobalEducacao implements IEducacao
         return false;
     }
     
+    @Override
     public void RemoverAluno()
     {
         System.out.println("Digite o nome do aluno: ");
@@ -117,6 +123,31 @@ public class GlobalEducacao implements IEducacao
         if(ApagarAluno(entrada))
             System.out.println("Aluno Removido");
         else
-            System.out.println("Aluno não Cadastrado");
+            System.out.println("Aluno não Cadastrado!");
+    }
+    
+    private boolean ApagarViagem(String destino)
+    {
+        for(int i=0; i<listaDeViagens.size(); i++)
+        {
+            if(listaDeViagens.get(i).getDestino().equals(destino))
+            {
+                listaDeViagens.remove(i);
+                return true;
+            }
+        }
+        
+        return false;
+    }
+    
+    @Override
+    public void RemoverViagem()
+    {
+        System.out.println("Destino: ");
+        String entrada = pegaEntrada.nextLine();
+        if(ApagarViagem(entrada))
+            System.out.println("Destino Removido");
+        else
+            System.out.println("Destino não cadastrado!");
     }
 }

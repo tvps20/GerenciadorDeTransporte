@@ -15,4 +15,6 @@ public interface IEducacao
     public void RemoverAluno();
     
     public void ApagardadosEducacao();
+    
+    public void RemoverViagem();
 }

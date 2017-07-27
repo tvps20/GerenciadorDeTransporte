@@ -13,4 +13,8 @@ public interface ISaude
     public void MostrarViagensSaude();  
     
     public void ApagarDadosSaude();
+    
+    public void RemoverPaciente();
+    
+    public void RemoverViagem();
 }

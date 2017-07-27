@@ -8,10 +8,11 @@ import java.util.Scanner;
 
 public class GlobalTransporte implements ITransporte
 {
-    private static Scanner pegaEntrada = new Scanner(System.in);
-    private static LinkedList<Motorista> listaDeMotoristas = new LinkedList();
-    private static LinkedList<Veiculo> listaDeVeiculos = new LinkedList();
+    private static final Scanner pegaEntrada = new Scanner(System.in);
+    private static final LinkedList<Motorista> listaDeMotoristas = new LinkedList();
+    private static final LinkedList<Veiculo> listaDeVeiculos = new LinkedList();
     
+    @Override
     public void AdicionarMotorista()
     {
         Motorista novoMotorista = new Motorista();
@@ -26,6 +27,7 @@ public class GlobalTransporte implements ITransporte
         System.out.println();
     }
     
+    @Override
     public void MostarMotoristas()
     {
         Motorista[] array = new Motorista[listaDeMotoristas.size()];
@@ -43,6 +45,7 @@ public class GlobalTransporte implements ITransporte
         System.out.println();      
     }
     
+    @Override
     public void AdicionarVeiculo()
     {
         Veiculo novoVeiculo = new Veiculo();
@@ -57,6 +60,7 @@ public class GlobalTransporte implements ITransporte
         System.out.println();
     }
     
+    @Override
     public void MostrarVeiculos()
     {
         Veiculo[] array = new Veiculo[listaDeVeiculos.size()];
@@ -72,5 +76,55 @@ public class GlobalTransporte implements ITransporte
             System.out.println("Nenhum Veículo Cadastrado.");
         
         System.out.println(); 
+    }
+    
+    private boolean ApagarMotorista(String nome)
+    {
+        for(int i=0; i<listaDeMotoristas.size(); i++)
+        {
+            if(listaDeMotoristas.get(i).getNome().equals(nome))
+            {
+                listaDeMotoristas.remove(i);
+                return true;
+            }
+        }
+        
+        return false;
+    }
+    
+    @Override
+    public void RemoverMotorista()
+    {
+        System.out.println("Digite o nome do Motorista: ");
+        String entrada = pegaEntrada.nextLine();
+        if(ApagarMotorista(entrada))
+            System.out.println("Motorista Removido");
+        else
+            System.out.println("Motorista não Cadastrado!");
+    }
+    
+    private boolean ApagarVeiculo(String placa)
+    {
+        for(int i=0; i<listaDeVeiculos.size(); i++)
+        {
+            if(listaDeVeiculos.get(i).getPlaca().equals(placa))
+            {
+                listaDeVeiculos.remove(i);
+                return true;
+            }
+        }
+        
+        return false;
+    }
+    
+    @Override
+    public void RemoverVeiculo()
+    {
+        System.out.println("Placa: ");
+        String entrada = pegaEntrada.nextLine();
+        if(ApagarVeiculo(entrada))
+            System.out.println("Veículo Removido");
+        else
+            System.out.println("Veículo não cadastrado!");
     }
 }
